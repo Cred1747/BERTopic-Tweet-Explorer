@@ -46,6 +46,12 @@ for doc in doc_files:
         model = "BTV3"
     elif "BT" in base:
         model = "BT"
+    elif "BTUSA" in base:
+        model = "BTUSA"
+    elif "BTUSA" in base:
+        model = "BTUSA"
+    elif "LM" in base:
+        model = "LMUSA"
 
     # Extract k-value using regex
     k_search = re.search(r'k=(\d+)', base)
@@ -79,6 +85,9 @@ app.layout = html.Div([
             html.Li("BTV3 (Brian Thompson): Positive k = 8, Negative k = 6"),
             html.Li("LM (Luigi Mangione): Positive k = 8, Negative k = 8"),
             html.Li("UHC (United Health Care): Positive k = 6, Negative k = 7")
+            html.Li("BTUSA (Brian Thompson USA): Positive k = 7, Negative k = 6"),
+            html.Li("LMUSA (Luigi Mangione USA): Positive k = 8, Negative k = 8"),
+            html.Li("UHCUSA (United Health Care USA): Positive k = 7, Negative k = 8")
         ])
     ], style={"marginBottom": "20px", "marginTop": "10px"}),
 
