@@ -50,7 +50,7 @@ for doc in doc_files:
         model = "BTUSA"
     elif "BTUSA" in base:
         model = "BTUSA"
-    elif "LM" in base:
+    elif "LMUSA" in base:
         model = "LMUSA"
 
     # Extract k-value using regex
