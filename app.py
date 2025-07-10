@@ -35,23 +35,24 @@ for doc in doc_files:
         polarity = "positive"
     elif "negative" in base:
         polarity = "negative"
-
+        
     # Extract model
     model = None
-    if "UHC" in base:
-        model = "UHC"
-    elif "LM" in base:
-        model = "LM"
+    if "BTUSA" in base:
+        model = "BTUSA"
+    elif "LMUSA" in base:
+        model = "LMUSA"
+    elif "UHCUSA" in base:
+        model = "UHCUSA"
     elif "BTV3" in base:
         model = "BTV3"
     elif "BT" in base:
         model = "BT"
-    elif "BTUSA" in base:
-        model = "BTUSA"
-    elif "BTUSA" in base:
-        model = "BTUSA"
-    elif "LMUSA" in base:
-        model = "LMUSA"
+    elif "LM" in base:
+        model = "LM"
+    elif "UHC" in base:
+        model = "UHC"
+
 
     # Extract k-value using regex
     k_search = re.search(r'k=(\d+)', base)
