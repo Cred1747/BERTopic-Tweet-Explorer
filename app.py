@@ -112,8 +112,8 @@ def update_graph(model, kval, clickData):
     if pair not in index:
         return px.bar(title="No data found."), "No tweets to display."
 
-    df = pd.read_csv(index[pair]["doc"], encoding='utf-8')
-    labels_df = pd.read_csv(index[pair]["label"], encoding='utf-8')
+    df = pd.read_csv(index[pair]["doc"], encoding='utf-8-sig')
+    labels_df = pd.read_csv(index[pair]["label"], encoding='utf-8-sig')
 
 
     df['Date'] = pd.to_datetime(df['Date'], errors='coerce').dt.date
