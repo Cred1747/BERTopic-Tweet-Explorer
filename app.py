@@ -40,6 +40,8 @@ for doc in doc_files:
     model = None
     if "BTUSA" in base:
         model = "BTUSA"
+    elif "LMNOUSA" in base:
+        model = "LMNOUSA"
     elif "LMUSA" in base:
         model = "LMUSA"
     elif "UHCUSA" in base:
