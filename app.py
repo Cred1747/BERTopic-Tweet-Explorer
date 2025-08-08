@@ -38,15 +38,7 @@ for doc in doc_files:
         
     # Extract model
     model = None
-    if "BTUSA" in base:
-        model = "BTUSA"
-    elif "LMNOUSA" in base:
-        model = "LMNOUSA"
-    elif "LMUSA" in base:
-        model = "LMUSA"
-    elif "UHCUSA" in base:
-        model = "UHCUSA"
-    elif "BTV3" in base:
+    if "BTV3" in base:
         model = "BTV3"
     elif "BT" in base:
         model = "BT"
@@ -182,4 +174,5 @@ def update_graph(model, kval, clickData):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
 
