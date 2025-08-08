@@ -38,15 +38,7 @@ for doc in doc_files:
         
     # Extract model
     model = None
-    if "BTUSA" in base:
-        model = "BTUSA"
-    elif "LMNOUSA" in base:
-        model = "LMNOUSA"
-    elif "LMUSA" in base:
-        model = "LMUSA"
-    elif "UHCUSA" in base:
-        model = "UHCUSA"
-    elif "BTV3" in base:
+    if "BTV3" in base:
         model = "BTV3"
     elif "BT" in base:
         model = "BT"
@@ -88,9 +80,6 @@ app.layout = html.Div([
             html.Li("BTV3 (Brian Thompson): Positive k = 8, Negative k = 6"),
             html.Li("LM (Luigi Mangione): Positive k = 8, Negative k = 8"),
             html.Li("UHC (United Health Care): Positive k = 6, Negative k = 7"),
-            html.Li("BTUSA (Brian Thompson USA): Positive k = 7, Negative k = 6"),
-            html.Li("LMUSA (Luigi Mangione USA): Positive k = 8, Negative k = 8"),
-            html.Li("UHCUSA (United Health Care USA): Positive k = 7, Negative k = 8")
         ])
     ], style={"marginBottom": "20px", "marginTop": "10px"}),
 
@@ -182,4 +171,6 @@ def update_graph(model, kval, clickData):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
+
 
