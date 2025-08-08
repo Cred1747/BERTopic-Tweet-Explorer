@@ -40,8 +40,6 @@ for doc in doc_files:
     model = None
     if "BTV3" in base:
         model = "BTV3"
-    elif "BT" in base:
-        model = "BT"
     elif "LM" in base:
         model = "LM"
     elif "UHC" in base:
@@ -171,6 +169,7 @@ def update_graph(model, kval, clickData):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
 
 
 
